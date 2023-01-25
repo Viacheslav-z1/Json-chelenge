@@ -10,10 +10,130 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: hsl(180, 29%, 50%);
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    position: relative;
+    height: 150px;
+  }
+}
+
+.form {
+  position: absolute;
+  bottom: -60px;
+  max-width: 1220px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  left: 0;
+  right: 0;
+  &__tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-height: 100px;
+    overflow-y: auto;
+    max-width: 500px;
+  }
+
+  &__tags-item {
+    background-color: hsl(180, 31%, 95%);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__tags-item-btn {
+    background-color: transparent;
+    font-weight: 700;
+    border: none;
+    background-color: hsl(180, 29%, 50%);
+    font-size: 17px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(180, 14%, 20%);
+    }
+  }
+
+  &__input-box {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__input-btn {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    font-weight: 700;
+    border: none;
+    background-color: hsl(180, 29%, 50%);
+    font-size: 17px;
+    padding: 11px;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(180, 14%, 20%);
+    }
+  }
+
+  &__input {
+    height: 40px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border: 1px solid hsl(180, 29%, 50%);
+    border-radius: 5px;
+    padding-right: 80px;
+    font-size: 18px;
+  }
+
+  &__btn-box {
+    max-width: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__clear {
+    background-color: transparent;
+    border: none;
+    color: hsl(180, 29%, 50%);
+    transition: all 0.5s;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid hsl(180, 29%, 50%);
+    }
+  }
 }
 
 .employee {
-  padding: 40px 0;
+  padding: 80px 0;
   &__list {
     display: flex;
     flex-direction: column;
@@ -30,6 +150,11 @@
     -webkit-box-shadow: 0px 9px 5px -4px rgba(177, 172, 207, 1);
     -moz-box-shadow: 0px 9px 5px -4px rgba(177, 172, 207, 1);
     box-shadow: 0px 9px 5px -4px rgba(177, 172, 207, 1);
+    border-left: 4px solid transparent;
+    transition: all .5s;
+    &:hover{
+      border-left: 4px solid hsl(180, 29%, 50%);
+    }
   }
 
   &__info {
@@ -111,6 +236,7 @@
   &__tags-list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
   }
 

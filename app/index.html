@@ -14,8 +14,23 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
+  
+   
     <div class="wrapper">
-      <header class="header"></header>
+      <header class="header">
+        <div class="container header__container">
+          <form class="form">
+            <ul class="form__tags"></ul>
+            <div class="form__input-box">
+              <input type="text" placeholder="Write search tag" class="form__input" />
+              <button class="form__input-btn">Search</button>
+            </div>
+            <div class="form__btn-box">
+              <button type="submit" class="form__clear">Clear all</button>
+            </div>
+          </form>
+        </div>
+      </header>
       <main class="main">
         <section class="employee">
           <div class="container">
