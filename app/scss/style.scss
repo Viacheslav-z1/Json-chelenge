@@ -1,0 +1,139 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+  height: 150px;
+  background-image: url("../images/bg-header-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: hsl(180, 29%, 50%);
+}
+
+.employee {
+  padding: 40px 0;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 35px;
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 5px -4px rgba(177, 172, 207, 1);
+    -moz-box-shadow: 0px 9px 5px -4px rgba(177, 172, 207, 1);
+    box-shadow: 0px 9px 5px -4px rgba(177, 172, 207, 1);
+  }
+
+  &__info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__img-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__info-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__position {
+    color: hsl(180, 14%, 20%);
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  &__info-details {
+  }
+
+  &__info-details__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__info-details__list-item {
+    position: relative;
+    color: hsl(180, 8%, 52%);
+    & + .employee__info-details__list-item {
+      padding-left: 10px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        left: 0;
+        top: 50%;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        background-color: hsl(180, 8%, 52%);
+      }
+    }
+  }
+  &__info-icons-item {
+    font-size: 16px;
+  }
+
+  &__info-icons-item-name {
+    color: hsl(180, 29%, 50%);
+  }
+
+  &__info-icons-item-new {
+    color: #fff;
+    padding: 6px 6px 3px 6px;
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 10px;
+  }
+  &__tags-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__info-icons-item-featured {
+    color: #fff;
+    background-color: hsl(180, 14%, 20%);
+    padding: 6px 6px 3px 6px;
+    border-radius: 10px;
+  }
+
+  &__tags-item {
+    background-color: hsl(180, 31%, 95%);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      color: #fff;
+      background-color: hsl(180, 29%, 50%);
+    }
+  }
+}
+
+@import "media";
